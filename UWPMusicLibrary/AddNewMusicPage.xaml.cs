@@ -15,6 +15,7 @@ using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Media.Imaging;
 using Windows.UI.Xaml.Navigation;
+using System.Collections.ObjectModel;
 
 // The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=234238
 
@@ -32,7 +33,7 @@ namespace UWPMusicLibrary
 
         private void BackButton_Click(object sender, RoutedEventArgs e)
         {
-           Frame.Navigate(typeof(MainPage));
+            Frame.Navigate(typeof(MainPage));
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
@@ -74,9 +75,26 @@ namespace UWPMusicLibrary
             }
         }
 
+        private async void uploadAudioFile_Click(object sender, RoutedEventArgs e)
+        {
+            FileOpenPicker openPicker = new FileOpenPicker();
+            openPicker.SuggestedStartLocation = PickerLocationId.MusicLibrary;
+            openPicker.ViewMode = PickerViewMode.Thumbnail;
+
+            openPicker.FileTypeFilter.Add(".mp3");
+            openPicker.FileTypeFilter.Add(".mp4");
+            openPicker.FileTypeFilter.Add(".wav");
+
+
+            StorageFile file = await openPicker.PickSingleFileAsync();
+        
+            
+            }
+        
         private void Save_Click(object sender, RoutedEventArgs e)
         {
-
         }
     }
+
+    
 }

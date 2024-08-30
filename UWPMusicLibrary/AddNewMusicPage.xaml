@@ -13,7 +13,7 @@
             <RowDefinition Height="90"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
-        <RelativePanel Margin="20">
+        <RelativePanel Margin="20,20,20,10">
             <Button Name="BackButton"
                     RelativePanel.AlignLeftWithPanel="True"
                     FontFamily="Segoe MDL2 Assets"
@@ -25,9 +25,10 @@
             <TextBlock Name="Title"
                        HorizontalAlignment="Center"
                 Text="Add New Music To Your Library"
+                       Foreground="BlueViolet"
                        RelativePanel.AlignHorizontalCenterWithPanel="True"
                        RelativePanel.AlignVerticalCenterWithPanel="True"
-                       FontSize="20"
+                       FontSize="25"
                        FontWeight="Bold"
                        />
         </RelativePanel>
@@ -36,9 +37,20 @@
                 <Button Name="uploadImage" Height="50" Width="200" Content="Upload Cover Image" Click="uploadImage_Click"/>
                 <Image Width="200" Height="200" Name="uploadedImage" />
             </StackPanel>
-            
-            <Button Height="100" Width="100"/>
-            <Button Height="100" Width="100"/>
+
+            <Button Height="50" Width="200"
+                    Content="Upload Audio file"
+                    Click="uploadAudioFile_Click"
+                    />
+            <StackPanel Orientation="Horizontal" Spacing="30">
+            <TextBox Height="30" Width="200"
+                     Foreground="Black"
+                     PlaceholderText="Write Artist/Music Information"
+                     
+                         />
+
+
+            </StackPanel>
             <Button Name="Save" Content="Save" Height="100" Width="200" HorizontalAlignment="Center" Click="Save_Click" />
 
         </StackPanel>
