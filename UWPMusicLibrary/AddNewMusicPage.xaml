@@ -10,22 +10,38 @@
 
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition Height="53*"/>
-            <RowDefinition Height="947*"/>
+            <RowDefinition Height="90"/>
+            <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
-        <RelativePanel>
+        <RelativePanel Margin="20">
             <Button Name="BackButton"
                     RelativePanel.AlignLeftWithPanel="True"
                     FontFamily="Segoe MDL2 Assets"
                     Content="&#xE0A6;"
                     Height="45"
                     Width="45"
+                    Click="BackButton_Click"
                     />
             <TextBlock Name="Title"
                        HorizontalAlignment="Center"
                 Text="Add New Music To Your Library"
-                       RelativePanel.RightOf="BackButton"
+                       RelativePanel.AlignHorizontalCenterWithPanel="True"
+                       RelativePanel.AlignVerticalCenterWithPanel="True"
+                       FontSize="20"
+                       FontWeight="Bold"
                        />
         </RelativePanel>
+        <StackPanel Orientation="Vertical" Grid.Row="1" Padding="20" Spacing="30">
+            <StackPanel Orientation="Horizontal" Spacing="30">
+                <Button Name="uploadImage" Height="50" Width="200" Content="Upload Cover Image" Click="uploadImage_Click"/>
+                <Image Width="200" Height="200" Name="uploadedImage" />
+            </StackPanel>
+            
+            <Button Height="100" Width="100"/>
+            <Button Height="100" Width="100"/>
+            <Button Name="Save" Content="Save" Height="100" Width="200" HorizontalAlignment="Center" Click="Save_Click" />
+
+        </StackPanel>
+                    
     </Grid>
 </Page>
