@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
+using Windows.Devices.Enumeration;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
 using Windows.UI.Xaml;
@@ -32,9 +33,14 @@ namespace UWPMusicLibrary
             Frame.Navigate(typeof(CollectionPage));
         }
 
+        
         private void AddMusic_Click(object sender, RoutedEventArgs e)
         {
-            Frame.Navigate(typeof(AddNewMusicPage));
+                Frame.Navigate(typeof(AddNewMusicPage));
+
+        
+
         }
+        
     }
 }

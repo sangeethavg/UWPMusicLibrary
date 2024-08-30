@@ -13,26 +13,36 @@
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
+        <RelativePanel>
+            <TextBlock Text="Music Library"
+                       Foreground="Blue"    
+                       HorizontalTextAlignment="Center"
+                       FontSize="100"
+                       FontWeight="Bold" Width="673"/>
+        </RelativePanel>
         <StackPanel Grid.Row="1"
                     Orientation="Horizontal"
                     HorizontalAlignment="Center"
                     VerticalAlignment="Center"
                     Margin="20">
             <Button Name="Viewcollection"
-        Content="View Collection"
+                    Content="View Collection"
                     MinWidth="300"
                     MinHeight="150"
                     Click="Viewcollection_Click"
-        Margin="10"/>
+                    Margin="10"/>
             <Button Name="AddMusic"
-        Content="Add New Music"
+                    Foreground="black"
+                    HorizontalAlignment="Left"
+                    Content="Add New Music"
                     MinWidth="300"
                     MinHeight="150"
                     Click="AddMusic_Click"
-        Margin="10"/>
-
+                    Margin="10"
+                    />
+         
 
         </StackPanel>
-
+        
     </Grid>
 </Page>
