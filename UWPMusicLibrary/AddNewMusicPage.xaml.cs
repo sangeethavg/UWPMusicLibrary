@@ -72,10 +72,22 @@ namespace UWPMusicLibrary
             }
             else
             {
+                return;
             }
         }
 
-        private async void uploadAudioFile_Click(object sender, RoutedEventArgs e)
+        private void SaveButton_Click(object sender, RoutedEventArgs e)
+        {
+            var imageSource = uploadedImage.Source as BitmapImage;
+            if (imageSource == null)
+
+            {
+                
+                return;
+            }
+
+        }
+            private async void uploadAudioFile_Click(object sender, RoutedEventArgs e)
         {
             FileOpenPicker openPicker = new FileOpenPicker();
             openPicker.SuggestedStartLocation = PickerLocationId.MusicLibrary;
@@ -90,11 +102,23 @@ namespace UWPMusicLibrary
         
             
             }
-        
+       
         private void Save_Click(object sender, RoutedEventArgs e)
         {
+
+       
+
+
+            var imageSource = uploadedImage.Source as BitmapImage;
+                if (imageSource == null)
+                {
+                    
+                    return;
+                }
+
+            
         }
     }
-
+   
     
 }
