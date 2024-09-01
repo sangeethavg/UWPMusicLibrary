@@ -9,6 +9,38 @@
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
     <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="90"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <RelativePanel Margin="20,20,20,10">
+            <Button Name="BackButton"
+            RelativePanel.AlignLeftWithPanel="True"
+            FontFamily="Segoe MDL2 Assets"
+            Content="&#xE0A6;"
+            Height="45"
+            Width="45"
+            Click="BackButton_Click"
+            />
+            <TextBlock Name="Title"
+               HorizontalAlignment="Center"
+        Text="Music Collection"
+               Foreground="BlueViolet"
+               RelativePanel.AlignHorizontalCenterWithPanel="True"
+               RelativePanel.AlignVerticalCenterWithPanel="True"
+               FontSize="25"
+               FontWeight="Bold"
+               />
+        </RelativePanel>
 
+        <StackPanel Orientation="Vertical" Grid.Row="1" Padding="20" Spacing="30">
+            <MediaElement x:Name="MusicPlayer" 
+                          Width="0" 
+                          Height="0" 
+                          />
+            <Button Content="Pause Music" Click="PauseMusic_Click" Width="100" Margin="10" HorizontalAlignment="Right"/>
+            <Button Content="Stop Music" Click="StopMusic_Click" Width="100" Margin="10" HorizontalAlignment="Right"/>
+            <Button Content="Play Music" Click="PlayMusic_Click" Width="100" Margin="10" HorizontalAlignment="right"/>
+        </StackPanel>
     </Grid>
 </Page>
