@@ -9,6 +9,39 @@
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
     <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="90"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <RelativePanel>
+            <Button Name="BackButton"
+                RelativePanel.AlignLeftWithPanel="True"
+                FontFamily="Segoe MDL2 Assets"
+                Content="&#xE0A6;"
+                Height="45"
+                Width="45"
+                Click="Backbutton_Click"
+                />
+        </RelativePanel>
+        <TextBlock Name="Title"
+                   HorizontalAlignment="Center"
+                   Text="My Collection"
+                   RelativePanel.AlignHorizontalCenterWithPanel="True"
+                   RelativePanel.AlignVerticalCenterWithPanel="True"
+                   FontSize="25"
+                   FontWeight="Bold"
+                   />
+        <ListView>
+            <ListView  Name="MusicCollectionListView"
+                       IsItemClickEnabled="True" 
+                       ItemsSource="{x:Bind musics}"
+                       ItemClick="MusicCollectionListView_ItemClick" 
+                       >
+                
+            </ListView>
+        </ListView>
+        
+
 
     </Grid>
 </Page>

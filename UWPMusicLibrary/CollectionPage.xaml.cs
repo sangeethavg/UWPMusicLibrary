@@ -1,8 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
+using UWPMusicLibrary.model;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
 using Windows.UI.Xaml;
@@ -22,9 +24,19 @@ namespace UWPMusicLibrary
     /// </summary>
     public sealed partial class CollectionPage : Page
     {
+        private ObservableCollection<Music> musics;
+
         public CollectionPage()
         {
             this.InitializeComponent();
+            musics = new ObservableCollection<Music>();
+            MusicCollection.GetAllMusics(musics);
+
+        }
+
+        private void MusicCollectionListView_ItemClick(object sender, ItemClickEventArgs e)
+        {
+
         }
     }
 }
