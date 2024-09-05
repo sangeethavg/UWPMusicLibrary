@@ -45,7 +45,8 @@
             MinHeight="150"
             Click="AddMusic_Click"
             Margin="10"
-            />
+            
+                    />
         </StackPanel>
     </Grid>
 </Page>

@@ -34,9 +34,35 @@ namespace UWPMusicLibrary
 
         }
 
-        private void MusicCollectionListView_ItemClick(object sender, ItemClickEventArgs e)
-        {
+        //private void MusicCollectionListView_ItemClick(object sender, ItemClickEventArgs e)
+        //{
 
-        }
+        //}
+
+        //private void BackButton_Click(object sender, RoutedEventArgs e)
+        //{
+        //    Frame.Navigate(typeof(MainPage));
+        //}
+
+        //private void PauseMusic_Click(object sender, RoutedEventArgs e)
+        //{
+        //    if (MusicPlayer.CanPause)
+        //    {
+        //        MusicPlayer.Pause();
+        //    }
+        //}
+
+        //private void StopMusic_Click(object sender, RoutedEventArgs e)
+        //{
+        //    MusicPlayer.Stop();
+        //}
+
+        //private void PlayMusic_Click(object sender, RoutedEventArgs e)
+        //{
+        //    MusicPlayer.Source = new Uri("pack://application:,,,/Resources/YourAudioFile.mp3", UriKind.Absolute);// Adjust path as needed
+        //    MusicPlayer.Play();
+        //}
     }
+
+
 }

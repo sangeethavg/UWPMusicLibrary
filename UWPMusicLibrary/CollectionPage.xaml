@@ -43,5 +43,14 @@
         
 
 
+        <StackPanel Orientation="Vertical" Grid.Row="1" Padding="20" Spacing="30">
+            <MediaElement x:Name="MusicPlayer" 
+                          Width="0" 
+                          Height="0" 
+                          />
+            <Button Content="Pause Music" Click="PauseMusic_Click" Width="100" Margin="10" HorizontalAlignment="Right"/>
+            <Button Content="Stop Music" Click="StopMusic_Click" Width="100" Margin="10" HorizontalAlignment="Right"/>
+            <Button Content="Play Music" Click="PlayMusic_Click" Width="100" Margin="10" HorizontalAlignment="right"/>
+        </StackPanel>
     </Grid>
 </Page>

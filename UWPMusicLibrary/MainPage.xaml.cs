@@ -38,7 +38,7 @@ namespace UWPMusicLibrary
         {
                 Frame.Navigate(typeof(AddNewMusicPage));
 
-        
+       
 
         }
         
