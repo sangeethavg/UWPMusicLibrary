@@ -100,7 +100,6 @@ namespace UWPMusicLibrary
 
             StorageFile file = await openPicker.PickSingleFileAsync();
         
-            
             }
        
         private void Save_Click(object sender, RoutedEventArgs e)

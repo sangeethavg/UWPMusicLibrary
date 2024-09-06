@@ -3,6 +3,7 @@
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:local="using:UWPMusicLibrary"
+    xmlns:data ="using:UWPMusicLibrary.model"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d"
@@ -31,13 +32,19 @@
                    FontSize="25"
                    FontWeight="Bold"
                    />
-        <ListView>
+        <ListView Grid.Row="1">
             <ListView  Name="MusicCollectionListView"
                        IsItemClickEnabled="True" 
                        ItemsSource="{x:Bind musics}"
                        ItemClick="MusicCollectionListView_ItemClick" 
                        >
-                
+                <ListView.ItemTemplate>
+                    <DataTemplate x:DataType="data:Music">
+                        <StackPanel Orientation="Horizontal" Margin="0,10,0,10">
+                            <TextBlock Text="{x:Bind Name}" FontSize="18" Margin="10,10,0,0" />
+                        </StackPanel>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
             </ListView>
         </ListView>
         
