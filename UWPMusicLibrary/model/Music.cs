@@ -17,7 +17,7 @@ namespace UWPMusicLibrary.model
         {
             Name = name;
             AudioFile = $"/Assets/Resources/{Name}.mp3";
-            ImageFile = $"/Assets/Image/{Name}.png";
+            ImageFile = $"/Assets/Image/{Name}.jpg";
         }
     }
 }

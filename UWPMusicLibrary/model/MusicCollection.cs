@@ -23,13 +23,12 @@ namespace UWPMusicLibrary.model
                 new Music("Please Pelase Please"),
                 new Music("Espresso"),
                 new Music("I Had some Help"),
-                new Music("Die with a smile"),
+                new Music("Die with smile"),
                 new Music("Birds of a feather"),
                 new Music("Good Luck, Babe"),
                 new Music("Not like Us"),
                 new Music("Lose Control")
-            };
-            
+            };            
         }
     }
 }

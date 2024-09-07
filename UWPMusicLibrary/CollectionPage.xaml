@@ -41,6 +41,7 @@
                 <ListView.ItemTemplate>
                     <DataTemplate x:DataType="data:Music">
                         <StackPanel Orientation="Horizontal" Margin="0,10,0,10">
+							<Image Source="{x:Bind ImageFile}" Height="60" Width="60" Margin="-10,0,0,0" />
                             <TextBlock Text="{x:Bind Name}" FontSize="18" Margin="10,10,0,0" />
                         </StackPanel>
                     </DataTemplate>
