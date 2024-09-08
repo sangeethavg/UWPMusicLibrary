@@ -16,6 +16,9 @@ using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Media.Imaging;
 using Windows.UI.Xaml.Navigation;
 using System.Collections.ObjectModel;
+using System.Diagnostics;
+using UWPMusicLibrary.model;
+using Windows.UI.Popups;
 
 // The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=234238
 
@@ -26,6 +29,8 @@ namespace UWPMusicLibrary
     /// </summary>
     public sealed partial class AddNewMusicPage : Page
     {
+        StorageFile selectedImageFile;
+        StorageFile selectedAudioFile;
         public AddNewMusicPage()
         {
             this.InitializeComponent();
@@ -36,11 +41,6 @@ namespace UWPMusicLibrary
             Frame.Navigate(typeof(MainPage));
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
-
         private async void uploadImage_Click(object sender, RoutedEventArgs e)
         {
             FileOpenPicker openPicker = new FileOpenPicker();
@@ -48,10 +48,6 @@ namespace UWPMusicLibrary
             openPicker.ViewMode = PickerViewMode.Thumbnail;
 
             openPicker.FileTypeFilter.Add(".jpg");
-            openPicker.FileTypeFilter.Add(".jpeg");
-            openPicker.FileTypeFilter.Add(".png");
-            openPicker.FileTypeFilter.Add(".bmp");
-            openPicker.FileTypeFilter.Add(".gif");
 
             StorageFile file = await openPicker.PickSingleFileAsync();
 
@@ -65,10 +61,7 @@ namespace UWPMusicLibrary
 
                 uploadedImage.Source = bitmapImage;
                 StorageFolder localfolder = ApplicationData.Current.LocalFolder;
-                StorageFile savedFile = await file.CopyAsync(localfolder, file.Name, NameCollisionOption.ReplaceExisting);
-                var savedFilePath = savedFile.Path;
-                Console.WriteLine("savedFilePath");
-                Console.WriteLine(savedFilePath);
+                selectedImageFile = await file.CopyAsync(localfolder, file.Name, NameCollisionOption.ReplaceExisting);
             }
             else
             {
@@ -76,13 +69,21 @@ namespace UWPMusicLibrary
             }
         }
 
-        private void SaveButton_Click(object sender, RoutedEventArgs e)
+        private async void Save_Click(object sender, RoutedEventArgs e)
         {
             var imageSource = uploadedImage.Source as BitmapImage;
-            if (imageSource == null)
-
+            if (imageSource != null && selectedAudioFile.Path != null)
             {
-                
+                MessageDialog messageDialog = new MessageDialog("Your new music information has been saved");
+                messageDialog.Commands.Add(new UICommand("Ok"));
+                await messageDialog.ShowAsync();
+                return;
+            }
+            else
+            {
+                MessageDialog messageDialog = new MessageDialog("There was an error saving the music to the album. Try again");
+                messageDialog.Commands.Add(new UICommand("Ok"));
+                await messageDialog.ShowAsync();
                 return;
             }
 
@@ -99,24 +100,17 @@ namespace UWPMusicLibrary
 
 
             StorageFile file = await openPicker.PickSingleFileAsync();
-        
+            if (file != null)
+            {
+                StorageFolder localfolder = ApplicationData.Current.LocalFolder;
+                selectedAudioFile = await file.CopyAsync(localfolder, file.Name, NameCollisionOption.ReplaceExisting);
             }
-       
-        private void Save_Click(object sender, RoutedEventArgs e)
-        {
+            else
+            {
+                return;
+            }
 
-       
-
-
-            var imageSource = uploadedImage.Source as BitmapImage;
-                if (imageSource == null)
-                {
-                    
-                    return;
-                }
-
-            
-        }
+        }      
     }
    
     

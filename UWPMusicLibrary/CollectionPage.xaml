@@ -41,7 +41,7 @@
                 <ListView.ItemTemplate>
                     <DataTemplate x:DataType="data:Music">
                         <StackPanel Orientation="Horizontal" Margin="0,10,0,10">
-							<Image Source="{x:Bind ImageFile}" Height="60" Width="60" Margin="-10,0,0,0" />
+							<Image Source="{x:Bind imageSource}" Height="60" Width="60" Margin="-10,0,0,0" />
                             <TextBlock Text="{x:Bind Name}" FontSize="18" Margin="10,10,0,0" />
                         </StackPanel>
                     </DataTemplate>
@@ -52,9 +52,9 @@
 
 
         <StackPanel Orientation="Vertical" Grid.Row="1" Padding="20" Spacing="30">
-            <MediaElement x:Name="MusicPlayer" 
-                          Width="0" 
-                          Height="0" 
+            <MediaElement x:Name="MusicPlayer" AutoPlay="True"
+                          Width="200" 
+                          Height="20" 
                           />
             <Button Content="Pause Music" Click="PauseMusic_Click" Width="100" Margin="10" HorizontalAlignment="Right"/>
             <Button Content="Stop Music" Click="StopMusic_Click" Width="100" Margin="10" HorizontalAlignment="Right"/>
