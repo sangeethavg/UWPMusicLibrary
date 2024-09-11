@@ -104,6 +104,7 @@ namespace UWPMusicLibrary
             {
                 StorageFolder localfolder = ApplicationData.Current.LocalFolder;
                 selectedAudioFile = await file.CopyAsync(localfolder, file.Name, NameCollisionOption.ReplaceExisting);
+                MusicPath.Text = selectedAudioFile.Path;
             }
             else
             {

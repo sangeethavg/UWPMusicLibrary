@@ -43,25 +43,20 @@
                 <Button Name="uploadImage" Height="50" Width="200" Content="Upload Cover Image" Click="uploadImage_Click"/>
                 <Image Width="200" Height="200" Name="uploadedImage" />
             </StackPanel>
-
-            <Button Height="50" Width="200"
-                    Content="Upload Audio file"
-                    Click="uploadAudioFile_Click"
-                    />
-            
             <StackPanel Orientation="Horizontal" Spacing="30">
+                <Button Height="50" Width="200"
+        Content="Upload Audio file"
+        Click="uploadAudioFile_Click"
+        />
                 <TextBox Height="30" Width="200"
-                     Foreground="Black"
-                     PlaceholderText="Write Artist/Music Information"
-                     
-                         />
-
-
+     Foreground="Black"
+     PlaceholderText="Write Artist/Music Information"
+     Name="MusicPath"
+         />
             </StackPanel>
             <Button Name="Save" Content="Save" Height="100" Width="200" HorizontalAlignment="Center" Click="Save_Click" />
 
         </StackPanel>
-        <TextBlock TextWrapping="Wrap" Text="Information has been saved Successfully" Margin="283,410,925,461" Grid.Row="1"/>
 
     </Grid>
 </Page>
