@@ -43,32 +43,6 @@ namespace UWPMusicLibrary.model
 
                 }
             }
-            //string ImagefolderPath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Assets\\Image");
-            //string MusicfolderPath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Assets\\Resources");
-
-            //if (Directory.Exists(MusicfolderPath))
-            //{
-            //    string[] filePaths = Directory.GetFiles(MusicfolderPath);
-
-            //    //new list for upload collection page
-            //    foreach (string filePath in filePaths)
-            //    {
-            //        string content = File.ReadAllText(filePath);
-            //        Console.WriteLine(content);
-            //        // if music file with same name as image file is found in music folder
-            //        if (File.Exists(filePath)) 
-            //        {
-            //            // then add to listOfMusic
-            //            musics.Add(new Music("", true));
-            //        }
-            //    }
-
-            //}
-            //else
-            //{
-            //    Console.WriteLine("Directory not found.");
-            //}
-
 
          }
            
