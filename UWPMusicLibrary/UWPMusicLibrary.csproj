@@ -138,21 +138,14 @@
     </AppxManifest>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Assets\Image\A bar song.jpg" />
     <Content Include="Assets\Image\Background image.png" />
     <Content Include="Assets\Image\Background image2.jpg" />
     <PRIResource Include="Assets\Resources\Death Grips - Beware.mp3" />
     <PRIResource Include="Assets\Resources\Death Grips - No Love.mp3" />
     <PRIResource Include="Assets\Resources\Sleepmakeswaves - It%27s Dark, It%27s Cold, It%27s Winter.mp3" />
-    <Content Include="Assets\Image\Birds Of a Feather.jpg" />
-    <Content Include="Assets\Image\Die with smile.jpg" />
-    <Content Include="Assets\Image\Espresso.jpg" />
-    <Content Include="Assets\Image\Good luck, Babe.jpg" />
-    <Content Include="Assets\Image\I had some help.jpg" />
-    <Content Include="Assets\Image\Lose Control.jpg" />
-    <Content Include="Assets\Image\Not like Us.jpg" />
-    <Content Include="Assets\Image\Please Please Please.jpg" />
-    <Content Include="Assets\Image\Taste.jpg" />
+    <Content Include="Assets\Image\Death Grips - Beware.jpg" />
+    <Content Include="Assets\Image\Death Grips - No Love.jpg" />
+    <Content Include="Assets\Image\Sleepmakeswaves - It%27s Dark, It%27s Cold, It%27s Winter.jpg" />
     <Content Include="Properties\Default.rd.xml" />
     <Content Include="Assets\LockScreenLogo.scale-200.png" />
     <Content Include="Assets\SplashScreen.scale-200.png" />

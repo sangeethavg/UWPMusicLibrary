@@ -41,6 +41,7 @@ namespace UWPMusicLibrary
             Frame.Navigate(typeof(MainPage));
         }
 
+        // Accept image file as input
         private async void uploadImage_Click(object sender, RoutedEventArgs e)
         {
             FileOpenPicker openPicker = new FileOpenPicker();
@@ -69,6 +70,7 @@ namespace UWPMusicLibrary
             }
         }
 
+        // When Save Button is Clicked, it needs to save files to local directory
         private async void Save_Click(object sender, RoutedEventArgs e)
         {
             var imageSource = uploadedImage.Source as BitmapImage;
@@ -88,7 +90,9 @@ namespace UWPMusicLibrary
             }
 
         }
-            private async void uploadAudioFile_Click(object sender, RoutedEventArgs e)
+
+        // Accept music file as input
+        private async void uploadAudioFile_Click(object sender, RoutedEventArgs e)
         {
             FileOpenPicker openPicker = new FileOpenPicker();
             openPicker.SuggestedStartLocation = PickerLocationId.MusicLibrary;

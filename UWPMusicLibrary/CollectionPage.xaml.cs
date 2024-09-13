@@ -36,7 +36,6 @@ namespace UWPMusicLibrary
             this.InitializeComponent();
             musics = new ObservableCollection<Music>();
             MusicCollection.GetAllMusics(musics);
-
         }
 
         private void MusicCollectionListView_ItemClick(object sender, ItemClickEventArgs e)
